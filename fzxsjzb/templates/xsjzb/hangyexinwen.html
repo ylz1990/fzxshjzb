@@ -1,0 +1,66 @@
+{% extends "xsjzb/base.html" %}
+{% block block_title %}
+<title>行业新闻</title>
+{% endblock %}
+
+{% block block_content %}
+<!--内容开始-->
+<div class="content_box1">
+  <div class="content_box2"> 
+    <div class="menu_box">
+       <p class="menu_box_title">新闻中心<span>news</span></p>
+       <ul class="menu_box1">
+          <li><a class='on' href="{% url 'gsxw' %}">公司新闻</a></li>
+          <li><a href="{% url 'hyxw' %}">行业新闻</a></li>
+       </ul>
+    </div>
+    <div class="content_boxL">
+       <div class="content_boxL_nav">
+         <p class="content_boxL_nav_title"><b>福州鑫世界珠宝</b></p>
+         <div class="content_boxL_nav_R"><a href="{% url 'index' %}">首页 ></a> <sapn>鑫世界珠宝 ></sapn><sapn>行业新闻 </sapn></div>
+       </div>
+       <div class="content_boxL_text">
+           {% for blog in blog_list %}
+         <ul class="content_boxL_list">
+            <li><a class="content_boxL_list_info" href="{% url 'xqy' blog.id %}">{{ blog.title }}<span class="yewu_date">{{ blog.pub_time|date:"Y-m-d" }}</span></a></li>
+         </ul>
+           {% endfor %}
+       </div>
+
+       <!--<div class="fenye_box"><a href="">首页</a><a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">……</a><a>下一页</a><a href="">最后一页</a></div>-->
+       <div class="fenye_box">
+           {% if blog_list.has_previous %}
+                <a href="?page=1" class="btn btn-success">
+                    首页
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.previous_page_number }}" 
+                   class="btn btn-secondary"
+                >
+
+                    {{ blog_list.previous_page_number }}
+                </a>
+            {% endif %}
+
+            <!-- 当前页面 -->
+            <span class="current btn btn-danger btn-lg">
+                {{ blog_list.number }}
+            </span>
+
+            <!-- 如果不是最末页，则显示下翻按钮 -->
+            {% if blog_list.has_next %}
+                <a href="?page={{ blog_list.next_page_number }}"
+                   class="btn btn-secondary"
+                >
+                    {{ blog_list.next_page_number }}
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.paginator.num_pages }}"
+                   class="btn btn-success"
+                >
+                    尾页
+                </a>
+            {% endif %}
+       </div>
+    </div>
+       {% endblock %}

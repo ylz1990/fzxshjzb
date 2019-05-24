@@ -1,0 +1,34 @@
+{% extends "xsjzb/base.html" %}
+{% load static %}
+{% block block_title %}
+<title>关于鑫世界</title>
+{% endblock %}
+
+{% block block_content %}
+
+<!--内容开始-->
+<div class="content_box1">
+  <div class="content_box2"> 
+    <div class="menu_box">
+       <p class="menu_box_title">关于鑫世界<span>About us</span></p>
+       <ul class="menu_box1">
+          <li><a href="#">公司简介</a></li>
+          <li><a href="{% url 'about_1' %}">企业文化</a></li>
+          <li><a href="{% url 'about_2' %}">未来发展</a></li>
+       </ul>
+    </div>
+    <div class="content_boxL">
+       <div class="content_boxL_nav">
+         <p class="content_boxL_nav_title"><b>福州鑫世界珠宝</b></p>
+         <div class="content_boxL_nav_R"><a href="">首页 ></a> <a href="">关于鑫世界 ></a><a href=""> 公司简介</a></div>
+       </div>
+       <div class="content_boxL_text">
+         <img class="content_boxL_pic" src="{% static 'images/gyhq_pic1.png' %}"/>
+           <p>深圳市鑫世界珠宝有限公司福州分公司于2018年08月24日成立。公司经营范围包括：黄金珠宝首饰的批发；工艺品的销售；经济信息咨询（不含金融、证券、保险、银行及法律、行政法规、国务院决定禁止、限制的项目）；计算机软硬件（除计算机信息系统安全专用产品）的销售；国内贸易等。</p>
+           <p>改革开放40年来我国经济快速发展，伴随着国民财富不断累积滋长的同时，也带动了金融市场的巨变。在国际金融行业快速发展的趋势下，深圳市鑫世界珠宝有限公司应运而生，历经多年征程，鑫世界珠宝已经成为了行业的资深者。在这几年发展中，鑫世界珠宝始终不忘初心砥砺前行，以合规稳健的发展，成功的为我国新金融行业探索出了一条独具特色的发展之路。
+        在合规前行方面，鑫世界珠宝自成立以来，始终积极拥抱监管，致力于合规化发展。而鑫世界珠宝作为积极拥抱监管，合规发展的其中一员，在大浪淘沙过后，依旧能站得住脚跟，挺得直腰板。
+        自鑫世界珠宝成立以来，始终专注于内外兼修，在内部管理、企业管理与文化、诚实信用原则及企业社会责任等方面严以自律。因为鑫世界珠宝深知，“诚信，乃立身之本”，故而以认真、专业、有担当的态度对待每一项业务，用诚信与匠心构筑企业发展的根基。
+        岁月蹉跎，五年征程，鑫世界珠宝始终对金融保持敬畏之心，真正的做到行稳致远。而坚守的匠心精神，也让鑫世界珠宝成为专业又有温度的金融品牌。</p>
+       </div>
+    </div>
+      {% endblock %}

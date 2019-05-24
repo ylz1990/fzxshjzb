@@ -1,0 +1,33 @@
+{% extends "xsjzb/base.html" %}
+{% load static %}
+{% block block_title %}
+<title>联系我们</title>
+{% endblock %}
+
+{% block block_content %}
+<!--内容开始-->
+<div class="content_box1">
+  <div class="content_box2"> 
+    <div class="menu_box">
+       <p class="menu_box_title">联系我们<span>Contact us </span></p>
+       <ul class="menu_box1">
+          <li><a href="">联系方式</a></li>
+       </ul>
+    </div>
+    <div class="content_boxL">
+       <div class="content_boxL_nav">
+         <p class="content_boxL_nav_title"><b>福州鑫世界珠宝</b></p>
+         <div class="content_boxL_nav_R"><a href="">首页 ></a> <a href="">联系我们 ></a><a href=""> 联系方式</a></div>                          
+       </div>
+       <div class="lxwm_box">
+          <img class="lxwm_pic" src="{% static 'images/map.jpg' %}"/>
+          <div class="lxwm_info">
+            <p class="lxwm_info1">公司名称：深圳鑫世界珠宝有限公司福州分公司</p>
+            <p class="lxwm_info2">公司地址：福建省福州市晋安区鑫世界珠宝</p>
+            <p class="lxwm_info3">公司电话：022-1234567</p>
+            <p class="lxwm_info4">公司传真：022-1234567</p>
+            <p class="lxwm_info5">公司邮箱：hq789@126.com</p>
+          </div> 
+       </div>
+    </div>
+      {% endblock %}

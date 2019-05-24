@@ -1,0 +1,48 @@
+{% extends "xsjzb/base.html" %}
+{% block block_title %}
+<title>黄金学院</title>
+{% endblock %}
+
+{% block block_content %}
+
+<!--内容开始-->
+<div class="content_box1">
+  <div class="content_box2">
+    <div class="menu_box">
+       <p class="menu_box_title">黄金学院<span>Gold College</span></p>
+       <ul class="menu_box1">
+          <li><a href="{% url 'ywjsxqy' gold1.id %}">黄金T+D</a></li>
+          <li><a href="{% url 'ywjsxqy' gold2.id %}">纸黄金</a></li>
+          <li><a href="{% url 'ywjsxqy' gold3.id %}">COMEX黄金</a></li>
+          <li><a href="{% url 'ywjsxqy' gold4.id %}">伦敦金</a></li>
+          <li><a href="{% url 'ywjsxqy' gold5.id %}">投资技巧</a></li>
+          <li><a href="{% url 'ywjsxqy' gold6.id %}">黄金投资</a></li>
+       </ul>
+    </div>
+    <div class="content_boxL">
+       <div class="content_boxL_nav">
+         <p class="content_boxL_nav_title"><b>福州鑫世界珠宝</b></p>
+         <div class="content_boxL_nav_R"><a href="">首页 ></a> <a href="">鑫世界珠宝 ></a><a href=""> 黄金学院</a></div>
+       </div>
+       <div class="content_boxL_text">
+         <p class="yewu_p"><span class="yewu_title">{{ gold1.title }}：</span>
+                    黄金t+d，是指由上海黄金交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量标的物的标准化合约。T+D里的"T"是Trade（交易）的首字母，"D"是Delay（延期）的首字母。这种买卖是由转移价格波动风险的生产经营者和承受价格风险而获利的风险投资者参加的，在交易所内依法公平竞争而进行的，并且有保证金制度为保障。
+                    <a href="{% url 'ywjsxqy' gold1.id %}" target="_blank">点击详情>></a></p>
+         <p class="yewu_p"><span class="yewu_title">{{ gold2.title }}：</span>
+                    “纸黄金”是一种个人凭证式黄金，投资者按银行报价在账面上买卖“虚拟”黄金，个人通过把握国际金价走势低吸高抛，赚取黄金价格的波动差价。投资者的买卖交易记录只在个人预先开立的“黄金存折账户”上体现，不发生实金提取和交割。
+                    <a href="{% url 'ywjsxqy' gold2.id %}" target="_blank">点击详情>></a></p>
+           <p class="yewu_p"><span class="yewu_title">{{ gold3.title }}：</span>
+                    美式黄金则是以美国的纽约商品交易所（COMEX）和芝加哥商品交易所（IMM）为代表的黄金市场实际上建立在典型的期货市场基础上，其交易类似于在该市场上进行交易的其它种商品。期货交易所作为一个非赢利性机构，本身不参加交易，只是为交易提供场地、设备，同时制定有关法规，确保交易公平、公正地进行，对交易进行严格监控。
+                 <a href="{% url 'ywjsxqy' gold3.id %}" target="_blank">点击详情>></a></p>
+         <p class="yewu_p"><span class="yewu_title">{{ gold4.title }}：</span>
+                    即我们通常所说的现货黄金。说到黄金，媒体上经常说到"伦敦金"，什么是伦敦金（loco London）呢？简言之，是存放在伦敦城地下金库里的99.5%纯度的400盎司金砖的狭义称呼，广义的伦敦金指的就是所有交易的现货黄金.
+                    <a href="{% url 'ywjsxqy' gold4.id %}" target="_blank">点击详情>></a></p>
+         <p class="yewu_p"><span class="yewu_title">{{ gold5.title }}：</span>
+                    1.黄金价格波动大；黄金t+d经常处于波动之中，可以利用这价差进行实盘黄金买卖。2.资金结算时间短；当日可进行多次反向交易，提供更多投资机遇。3.操作简单；有无基础均可，即看即会;比炒股票更简单，不用选股那么麻烦，全世界都在炒这种黄金，而且没有庄家。4.双向交易；即可买涨也可买跌。如黄金涨，做多，赚;黄金跌，做空，也赚。5.保值强；黄金从古至今都是最佳保值产品之一，升值潜力大。
+                     <a href="{% url 'ywjsxqy' gold5.id %}" target="_blank">点击详情>></a></p>
+           <p class="yewu_p"><span class="yewu_title">{{ gold6.title }}：</span>
+                    黄金长久以来一直是一种投资工具。它价值高，并且是一种独立的资源，不受限于任何国家或贸易市场，它与公司或政府也没有牵连。因此，投资黄金通常可以帮助投资者避免经济环境中可能会发生的问题，而且，黄金投资是世界上税务负担最轻的投资项目。黄金投资意味着投资于金条、金币、甚至金饰品，投资市场中存在着众多不同种类的黄金帐户。
+                    <a href="{% url 'ywjsxqy' gold6.id %}" target="_blank">点击详情>></a></p>
+       </div>
+    </div>
+      {% endblock %}

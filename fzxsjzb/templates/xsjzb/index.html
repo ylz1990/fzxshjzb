@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'css/style1.css' %}" rel="stylesheet" type="text/css" />
+<script src="{% static 'js/jquery1.42.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery.superslide.2.1.1.js' %}" type="text/javascript"></script>
+<title>首页</title>
+</head>
+
+<body>
+<div class="wapper_box">
+<div class="header_box"></div>
+<div class="header_box1">
+    <div class="header_box2" >
+         <a class="logo_box"  href="{% url 'index' %}"><img src="{% static 'images/xsj.png' %}" width="233px" height="60px" alt="福州鑫世界珠宝"/></a>
+         <ul class="nav_box" >
+             <li class="nav_1"><a class="nav_but"  href="{% url 'index' %}">网站首页</a></li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'guanyuhuaqi' %}">鑫世界</a>
+               <div class="nav_slide">
+                 <div class="nav_slide1">
+                    <a href="{% url 'guanyuhuaqi' %}">公司简介<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'about_1' %}">企业文化<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'about_2' %}">未来发展<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                 </div>
+                </div> 
+             </li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'yewujieshao' %}">黄金学院</a>
+                <div class="nav_slide">
+                  <div class="nav_slide1">
+                    <a href="{% url 'yewujieshao' %}">黄金T+D<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'yewujieshao' %}">纸黄金<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'yewujieshao' %}">COMEX黄金<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'yewujieshao' %}">伦敦金<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'yewujieshao' %}">投资技巧<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'yewujieshao' %}">黄金投资<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                  </div>
+                </div> 
+             </li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'xinwenzhongxin' %}">新闻中心</a>
+               <div class="nav_slide">
+                <div class="nav_slide1">
+                    <a href="{% url 'gsxw' %}">公司新闻<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    <a href="{% url 'hyxw' %}">行业新闻<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                 </div>
+               </div>  
+             </li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'chenggonganli' %}">大咖论道</a>
+                 <div class="nav_slide">
+						<div class="nav_slide1">
+							<a href="">机构精评<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    		<a href="">机构观点<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    		<a href="">名家策略<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+                    		<a href="">名家精评<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>
+						</div>
+                 </div>
+             </li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'lianxiwomen' %}">联系我们</a>
+               <!--<div class="nav_slide">-->
+                 <!--<div class="nav_slide1">-->
+                    <!--<a href="">公司简介<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>-->
+                    <!--<a href="">企业文化<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>-->
+                    <!--<a href="">未来发展<span><img src="{% static 'images/siade_bg1.png' %}"/></span></a>-->
+                 <!--</div>-->
+              <!--</div>  -->
+             </li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'personal' %}">个人简介</a></li>
+             <li class="nav_1"><a class="nav_but" href="{% url 'liuyanban' %}">留言板</a></li>
+         </ul>
+    </div>
+        <script>	 
+             $(".nav_1").mouseenter(function(){
+				 $(this).find(".nav_slide").slideDown()
+			  });
+			  
+			  $(".nav_1").mouseleave(function(){ 
+				 $(".nav_slide").slideUp()
+			 });
+			 //$(".producys_box").mouseout(function(){
+				// $(this).find(".producys_box1").slideUp(); 
+			 //});
+          </script>
+</div>
+<!--banner部分开始-->
+  <div class="banner_box">
+        <ul class="banner_pic">
+            <li><img src="{% static 'images/banner1.jpg'%}" /></li>
+            <li><img src="{% static 'images/xsj_ban1.jpg'%}" /></li>
+            <li><img src="{% static 'images/xsj_ban2.jpg'%}" /></li>
+            <li><img src="{% static 'images/xsj_ban3.jpg'%}" /></li>
+        </ul>
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+        <div class="num"><ul></ul></div>
+  </div>
+	<script>
+    /*鼠标移过，左右按钮显示*/
+    $(".banner_box").hover(function(){
+        $(this).find(".prev,.next").fadeTo("show",0.1);
+    },function(){
+        $(this).find(".prev,.next").hide();
+    })
+    /*鼠标移过某个按钮 高亮显示*/
+    $(".prev,.next").hover(function(){
+        $(this).fadeTo("show",0.7);
+    },function(){
+        $(this).fadeTo("show",0.1);
+    })
+    $(".banner_box").slide({ titCell:".num ul" , mainCell:".banner_pic" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
+    </script>
+    <!-- 代码 结束 -->
+  <!--banner部分结束-->
+
+<!--内容开始-->
+<div class="content_box">
+   <ul class="content_box_top">
+      <li>
+        <a href=""><img src="{% static 'images/icon1.png' %}"/></a>
+        <h3 class="obj_title">专注财富增值</h3>
+        <p>始终以“为客户创造财富”这一服务理念作为己任</p>
+      </li>
+      <li>
+        <a href=""><img src="{% static 'images/icon2.png' %}"/></a>
+        <h3 class="obj_title">行情实时解析</h3>
+        <p>公司提供专业的行情软件，客户可随时了解行情，掌握行情机会</p>
+      </li>
+      <li>
+        <a href=""><img src="{% static 'images/icon3.png' %}"/></a>
+        <h3 class="obj_title">VIP尊享</h3>
+        <p>VIP行情、策略、操作提醒服务，私享专家为您定制的投资方案</p>
+      </li>
+      <li>
+        <a href=""><img src="{% static 'images/icon4.png' %}"/></a>
+        <h3 class="obj_title">策略分享</h3>
+        <p>公司专家团队全面分析，提供客户最专业的策略分享</p>
+      </li> 
+   </ul>
+   <div class="content_box_bot">
+       <ul class="content_box_bot_l">
+          <li class="info_news">
+            <div class="info_news_but"><p class="on">公司新闻</p><p>行业资讯</p></div>
+            <ul class="info_news_text info_news_text1">
+                    {% for blog in blog_list|slice:":4" %}
+              <li><a href="{% url 'xqy' blog.id %}"><img src="{% static 'images/info_icon1.png' %}"/><p>{{ blog.title }}<span class="date">{{ blog.pub_time|date:"Y-m-d" }}</span></p></a></li>
+                    {% endfor %}
+            </ul>
+            <ul class="info_news_text info_news_text2" >
+                {% for blog in blog_list1|slice:":4" %}
+              <li><a href="{% url 'xqy' blog.id %}"><img src="{% static 'images/info_icon1.png' %}"/><p>{{ blog.title }}<span class="date">{{ blog.pub_time|date:"Y-m-d" }}</span></p></a></li>
+                {% endfor %}
+
+            </ul>
+          <script>
+            $(".info_news_but p").each(function(n){
+				$(this).click(function(){
+				$(this).addClass("on").siblings("p").removeClass("on");
+				$(".info_news_text").hide(400).eq(n).show(500);
+		    });
+           });
+          
+          </script>
+          </li>
+          <li class="search_obj">
+            <p class="search_obj_title">黄金学院<span>Classification search</span></p>
+            <div class="search_obj1">
+               <a href="">黄金T+D</a>  <a href="">纸黄金</a>  <a href="">伦敦金</a>
+               <a href="">投资技巧</a>  <a href="">黄金投资</a>  <a href="{% url 'yewujieshao' %}">更多>></a>
+            </div>
+          </li>
+       </ul>
+       
+      <ul class="content_box_bot_r">
+          <li class="jianjie_box">
+            <p class="jianjie_title">关于鑫世界<span>COMPANY</span></p>
+            <div class="jianjie_box1">
+              <img src="{% static 'images/jj_pic.jpg' %}"/>
+              <a href="">黄金珠宝首饰的批发;工艺品的销售;经济信息咨询(不含金融、证券、保险、银行及法律、行政法规、国务院决定禁止、限制的项目);计算机软硬件(除计算机信息系统安全专用产品)的销售;国内贸易。(依法须经批准的项目,经相关部门批准后方可开展经营活动)...<span>[详情]</span></a></div>
+          </li>
+          <li class="zichan_box">
+            <P>企业信念<span>Enterprise Belief</span></P>
+            <a href="">“艰苦坚实、诚信承诺、实干实效”：以艰苦的作风打拼坚实的企业基础;以诚实的信念承诺一流的企业服务;实干的精神创造高效的企业业绩。开拓、创新，立足市场求发展;优质、高效，用心服务为用户<span>[详情]</span></a>
+          </li>
+       </ul>
+   </div>
+   
+   <div class="info_search">
+     <ul class="info_search_l">
+        <li>友情链接：
+        <select name="pageselect" onchange="self.location.href=options[selectedIndex].value" > 
+          <option value ="https://www.sge.com.cn/">上海黄金交易所</option>
+          <option value ="http://bank.pingan.com/">平安银行</option>
+          <option value="http://www.cngold.org.cn/">中国黄金协会</option>
+          <option value="https://www.gold.org/">世界黄金协会</option>
+        </select>
+        </li>
+        <li>关于我们：
+        <select name="pageselect" onchange="self.location.href=options[selectedIndex].value" >
+          <option value ="" >黄金T+D</option>
+          <option value ="#">新闻中心</option>
+          <option value ="#">投资技巧</option>
+          <option value ="#">黄金投资</option>
+        </select>
+        </li>
+    </ul>
+    <div class="info_search_r"> 
+        <a href=""><img src="{% static 'images/icon5.png' %}"/><span>新浪微博</span></a> <a href=""><img src="{% static 'images/icon6.png' %}"/><span>微信</span></a>
+    </div>
+   </div>
+</div>
+
+<!--内容结束--> 
+<div class="footer_box"><p>--Copyright © 2009-2019 XINSHIJIE 深圳鑫世界珠宝有限公司福州分公司  --更多资讯：<a href="https://weibo.com/u/7004135204" target="_blank">福州鑫世界珠宝</a>--</p></div>
+
+</div>
+
+
+</body>
+
+</html>

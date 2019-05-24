@@ -1,0 +1,65 @@
+{% extends "xsjzb/base.html" %}
+{% load static %}
+{% block block_title %}
+<title>大咖论道</title>
+{% endblock %}
+
+{% block block_content %}
+
+<!--内容开始-->
+<div class="content_box1">
+  <div class="content_box2"> 
+    <div class="menu_box">
+       <p class="menu_box_title">大咖论道<span>Successful </span></p>
+       <ul class="menu_box1">
+          <li><a href="http://www.dyhjw.com/organ/2.html" target="_blank">机构精评</a></li>
+          <li><a href="http://www.dyhjw.com/organ/1.html " target="_blank">机构观点</a></li>
+          <li><a href="http://www.dyhjw.com/mj/1.html" target="_blank">名家策略</a></li>
+          <li><a href="http://www.dyhjw.com/mj/2.html" target="_blank">名家精评</a></li>
+       </ul>
+    </div>
+    <div class="content_boxL">
+       <div class="content_boxL_nav">
+         <p class="content_boxL_nav_title"><b>福州鑫世界珠宝</b></p>
+         <div class="content_boxL_nav_R"><a href="{% url 'index' %}">首页 ></a> <span>鑫世界珠宝 ></span><span>大咖论道</span></div>
+       </div>
+       <div class="content_boxL_text">
+         <ul class="cgal_list">
+             <li><img class="cgal_pic" src="{% static 'images/dkld1.jpg' %}" style="width: 319px " />
+                <div class="cgan_xqy">
+                    <p>本周的走势也是在富铭的预期之内，毕竟富铭从一开始就说了，维持1290-1310这个大区间来操作，而行情也正是如此。
+                        就目前来说，富铭不认为行情还会走低，预测下周会维持1290-1300震荡，毕竟从技术面来看，黄金1287附近支撑位置非常强硬，
+                        黄金在没有消息面的情况下，黄金想要下破走低至1280无疑是非常难的。另外，行情走势分析及操作策略富铭会在周一早间根据行情实时更新，各位关注好即可！</p>
+                    <a href="http://www.dyhjw.com/organ/2.html" target="_blank">点击详情>></a>
+                </div>
+             </li>
+             <li><img class="cgal_pic" src="{% static 'images/dkld2.jpg'  %}" style="width: 319px "/>
+                <div class="cgan_xqy">
+                    <p>投资理财好比是一座金山，里面蕴藏着数不尽的财富。我们没有必要也不可能把它的财富在一朝一夕都收入囊中。
+                        我们为什么不能放下急于发财的心态，踏踏实实、一个点一个点地去赚取财富呢？在富铭的炒金生涯中，我一直都坚持这样的投资理念：炒金最重要的不是你一次能够赚取多少，
+                        而是你能不能稳定地获利，长久地立足生存。这就好比滚雪球，时间越久雪球就会越大，最后自身的扛外界干扰就会越强。</p>
+                    <a href="http://www.dyhjw.com/organ/1.html " target="_blank">点击详情>></a>
+                </div>
+             </li>
+             <li><img class="cgal_pic" src="{% static 'images/dkld3.jpg'  %}" style="width: 319px "/>
+                <div class="cgan_xqy">
+                    <p>专业的事情交给我来做，你需要的就是合理的配合，严格的遵守操作手法和风格即可。很多人因自己喜欢贪图小便宜深陷其中，一味的只考虑手续费低，成本低，那么我就能好好赚钱，
+                        其结果呢？前来的人个个满身是伤。行情天天有，时间是最好的证明，要想在这个市场站稳或者走的长久，
+                        思想和胆识不要那么的前卫，适当打开自己的心扉做好自己，多换位思考，何尝不是一件开心的事情呢？</p>
+                    <a href="http://www.dyhjw.com/mj/1.html" target="_blank">点击详情>></a>
+                </div>
+             </li>
+             <li><img class="cgal_pic" src="{% static 'images/dkld4.jpg'  %}" style="width: 319px "/>
+                <div class="cgan_xqy">
+                    <p>投资是长久的事情，以饱含学习的思维去看待投资，你的投资路才能够越走越远。如果你是散户不妨与陈枫我交流一番，
+                        与我相识不会对你造成任何损失，相反会对你起到较大的帮助。如果你认为自己的老师很专业，不要盲目的去追求做单，
+                        你不妨多向他多请教技术和操盘技巧，行情判断，我相信你的老师一定很乐于教导你，再者可以与我沟通，我也会很乐意帮助你。
+                        如果是在做投资的路上亏损，或者近期存在单子套着的情况的朋友，在我力所能及的情况下，我也可以给你你所需要的帮助。</p>
+                    <a href="http://www.dyhjw.com/mj/2.html" target="_blank">点击详情>></a>
+                </div>
+             </li>
+         </ul>       
+       </div>
+       <!--<div class="fenye_box"><a href="">首页</a><a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">……</a><a>下一页</a><a href="">最后一页</a></div>-->
+    </div>
+   {% endblock %}
