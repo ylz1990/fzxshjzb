@@ -3,10 +3,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('test1/',views.text),
-    path('xsjzb/',views.xsj_index,name="index"),
-    path('add/',views.xsj_add,name="add"),
-    path('add_handle/',views.xsj_add_handle,name="add_handle"),
+    path('',views.xsj_index,name="index"),
+    # path('add/',views.xsj_add,name="add"),
+    # path('add_handle/',views.xsj_add_handle,name="add_handle"),
+
     path('cgal/',views.xsj_cgal,name="chenggonganli"),
 
     path('gyhq/',views.xsj_gyhq,name="guanyuhuaqi"),
@@ -26,9 +26,9 @@ urlpatterns = [
     path('ywjs/',views.xsj_ywjs,name="yewujieshao"),
     path('ywjs/xqy/<blog_id>',views.xsj_col,name="ywjsxqy"),
 
-    path('edit/',views.xsj_edit,name="edit"),
-    path('delete/<blog_id>',views.delete,name="delete"),
-    path('alter/<blog_id>',views.alter,name="alter"),
+    # path('edit/',views.xsj_edit,name="edit"),
+    # path('delete/<blog_id>',views.delete,name="delete"),
+    # path('alter/<blog_id>',views.alter,name="alter"),
     # path('college/',views.college,name="aclooege"),
 
 ]

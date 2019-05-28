@@ -74,10 +74,11 @@ a:active, a:focus {
 			 top:0;
 			 box-shadow:0px 4px 14px #666;
 			 z-index:600; }			 
-.header_box2{ width:1200px;  
+.header_box2{ width:1200px;
 			  margin:0 auto;}
 .logo_box{ display:block;
            margin-top:20px;
+			margin-left: 20px;
 		   float:left;}			  
 .nav_box{ width:902px;
           height:116px;
@@ -87,17 +88,17 @@ a:active, a:focus {
 .nav_box .nav_1{float:left; position:relative;}			  
 .nav_but{ font-size:16px;
 		  color:black;
-		  margin-left:22px;
-		  padding:48px 14px;}			  
+	      margin-left: 22px;
+		  padding:48px 10px;}
 .nav_but:hover{ background:#005e11;
                 color:white;}
-.nav_slide{ width:150px; 
+.nav_slide{ width:150px;
             position:absolute;
 			left:22px;
 			display:none;
 			top:66px;
 			z-index:800;}
-.nav_slide1{ width:140px; 
+.nav_slide1{ width:140px;
              background:white;
              border-bottom:3px solid #e0e2e3;}							
 .nav_slide a{ padding:17px 20px 17px 15px; 

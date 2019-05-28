@@ -7,8 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Article,College
 from datetime import datetime
 
-def text(request):
-    return HttpResponse("hello yeliangzhen")
+
 
 
 # 首页
@@ -133,56 +132,56 @@ def xsj_col(request, blog_id):
     return render(request, "xsjzb/yewujieshao_xqy.html", context)
 
 # 添加文章
-def xsj_add(request):
-    return render(request, "xsjzb/add.html")
-# 添加文章
-def xsj_add_handle(request):
-    title = request.POST.get('title')
-    author = request.POST.get('author')
-    content = request.POST.get('content')
-    pub_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    new_type = request.POST.get("new")
-    blog = Article(title=title, author=author,pub_time=pub_time,content=content,new_type=new_type)
-    blog.save()
-    return render(request, "xsjzb/add.html")
-
-# 编辑文章的页面
-def xsj_edit(request):
-    context = {}
-    blog_list = Article.objects.all().order_by("-pub_time")
-    page_robot = Paginator(blog_list, 10)
-    try:
-        blog_list = page_robot.page(request.GET.get("page"))
-    except PageNotAnInteger:
-        blog_list = page_robot.page(1)
-    except EmptyPage:
-        blog_list = page_robot.page(page_robot.num_pages)
-    context['blog_list'] = blog_list
-    return render(request,"xsjzb/edit.html", context)
-
-# 删除文章
-def delete(request, blog_id):
-    blog = Article.objects.get(id=blog_id)
-    if blog:
-        blog.delete()
-        return redirect(reverse('edit'))
-    else:
-        return HttpResponse("没有这篇博客")
-
-# 修改文章
-def alter(request, blog_id):
-    blog = Article.objects.get(id=blog_id)
-    if request.method == "GET":
-        return render(request,'xsjzb/alter.html',context={"blog":blog})
-    elif request.method == "POST":
-        title = request.POST.get("title")
-        author = request.POST.get("author")
-        content = request.POST.get("content")
-        blog.title = title
-        blog.author = author
-        blog.content = content
-        blog.save()
-        return redirect(reverse("edit"))
+# def xsj_add(request):
+#     return render(request, "xsjzb/add.html")
+# # 添加文章
+# def xsj_add_handle(request):
+#     title = request.POST.get('title')
+#     author = request.POST.get('author')
+#     content = request.POST.get('content')
+#     pub_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#     new_type = request.POST.get("new")
+#     blog = Article(title=title, author=author,pub_time=pub_time,content=content,new_type=new_type)
+#     blog.save()
+#     return render(request, "xsjzb/add.html")
+#
+# # 编辑文章的页面
+# def xsj_edit(request):
+#     context = {}
+#     blog_list = Article.objects.all().order_by("-pub_time")
+#     page_robot = Paginator(blog_list, 10)
+#     try:
+#         blog_list = page_robot.page(request.GET.get("page"))
+#     except PageNotAnInteger:
+#         blog_list = page_robot.page(1)
+#     except EmptyPage:
+#         blog_list = page_robot.page(page_robot.num_pages)
+#     context['blog_list'] = blog_list
+#     return render(request,"xsjzb/edit.html", context)
+#
+# # 删除文章
+# def delete(request, blog_id):
+#     blog = Article.objects.get(id=blog_id)
+#     if blog:
+#         blog.delete()
+#         return redirect(reverse('edit'))
+#     else:
+#         return HttpResponse("没有这篇博客")
+#
+# # 修改文章
+# def alter(request, blog_id):
+#     blog = Article.objects.get(id=blog_id)
+#     if request.method == "GET":
+#         return render(request,'xsjzb/alter.html',context={"blog":blog})
+#     elif request.method == "POST":
+#         title = request.POST.get("title")
+#         author = request.POST.get("author")
+#         content = request.POST.get("content")
+#         blog.title = title
+#         blog.author = author
+#         blog.content = content
+#         blog.save()
+#         return redirect(reverse("edit"))
 
 # def college(request):
 

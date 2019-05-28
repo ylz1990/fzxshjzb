@@ -19,5 +19,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
-    path("xsjzb/", include('xsjzb.urls')),
+    path("", include('xsjzb.urls')),
 ]
